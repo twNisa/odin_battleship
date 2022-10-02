@@ -23,7 +23,7 @@ A turquoise cell with an 'X' marks a hit on a ship.
 The win condition is to sink all the enemy ships.
 
 
-# Things to improve for future
+# Things to add for future
 - better AI
 - refactor code
 - recreate in React
