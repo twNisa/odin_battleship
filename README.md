@@ -1,5 +1,6 @@
 # odin_battleship
 A single player battleship game, win by sinking all of the opponent's ships
+
 https://twnisa.github.io/odin_battleship/
 
 # Project
