@@ -14,6 +14,7 @@ const planningRandomBtn = document.querySelector(".planning-random-btn")
 const playerBoard = document.querySelector(".player-board")
 const aiBoard = document.querySelector(".enemy-board")
 const boards = document.querySelector(".boards")
+const resetGameBtn = document.querySelector(".reset-btn")
 
 const endGameDiv = document.querySelector(".end-game")
 const overlay = document.querySelector(".overlay")
@@ -159,7 +160,9 @@ function handleGameStartClick(){
   if(isPlanningDone){
     stopPlanning()
     createRandomAIFleet()
+    resetGameBtn.addEventListener("click", resetGame)
     renderBoard(boards, player, ai)
+
   } else{
     console.log("not going to start")
   }
