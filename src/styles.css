@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  padding: 2rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.boards{
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.board{
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.cell{
+  border: 1px solid black;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color .15s linear;
+}
+
+.cell:hover{
+  background-color: rgba(0,0,0,.2);
+}
+.ship{
+  background-color: #aaa;
+}
+
+.planning{
+  position: absolute;
+  
+}
+
+
+.is-shot{
+  background: url(./assets/dot.svg) no-repeat center;
+  background-size: .6rem;
+}
+.ship-shot{
+  background: url(./assets/x-mark.svg) no-repeat center;
+}
+
+.has-ship{
+  background-color: darkcyan;
+}
+
+.planning{
+  position: absolute;
+  top: 10%;
+  background-color: darkcyan;
+   z-index: 100; 
+
+}
+
+.end-game{
+  z-index: 100;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  padding: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: darkcyan;
+  gap: .5rem;
+}
+.end-game button{
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.overlay{
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .25);
+  z-index: 1;
+}
+.active{
+  display: flex;
+}
+
+.hovering{
+  background-color:darkcyan ;
+}
+.planning-board{
+  background-color: white;
+}
+.planning{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: 2rem 0;
+  width: 100vw;
+  color: white;
+}
+.planning-btn {
+  display: block;
+  padding: .8rem 1rem;
+  width: 8rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 0 -4px 2px rgba(0, 0, 0, .25);
+}
+.planning-btn:hover{
+  box-shadow: inset 0 0px 2px rgba(0, 0, 0, .25);
+  transition: all .15s linear;
+}
+.bottom-btns{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
